@@ -1,145 +1,329 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Gang Zhou</title>
-  <meta name="author" content="Yuheng Ji">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
-  <style>
-    /* Additional styles */
-    .container {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .left-content {
-      margin-right: 20px;
-      text-align: center;
-    }
-
-    .left-content img {
-      width: 124px;
-      height: 160px;
-    }
-
-    .text-content {
-      flex: 1;
-    }
-    
-    .text-content p {
-      margin-top: 10px;
-    }
-
-    .name {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .institution {
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="left-content">
-      <img src="images/GangZhou.jpg" alt="Photo">
-      <div class="name">Gang Zhou(周刚)</div>
-      <div class="institution">Beijing University of Posts and Telecommunications</div>
-    </div>
-    <div class="text-content">
-      <p>Welcome to my personal homepage! I am a Ph.D. student at the School of Artificial Intelligence, Beijing University of Posts and Telecommunications. I expect to graduate in 2027.</p>
-    </div>
-  </div>
-
-  <!-- You can add more sections here, such as research interests, publications, CV, etc. -->
-
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle">
-          <h2>Research</h2>
-          <p>My research focuses on trustworthy multimodal data retrieval and vision-language models.<br> * denotes equal contributions.</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Paper List -->
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='images/reason_rft.png' width="180">
-          </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://tanhuajie.github.io/ReasonRFT/">
-            <h3>Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning</h3>
-          </a>
-          <p>Huajie Tan*, <strong>Yuheng Ji*</strong>, Xiaoshuai Hao*, Minglan Lin, Pengwei Wang, Shanghang Zhang<br><em>arXiv</em>, 2025</p>
-          <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a> / <a href="https://tanhuajie.github.io/ReasonRFT/">Paper</a>
-          <p>We developed <strong>Reason-RFT</strong>, a novel reinforcement fine-tuning framework that enhances visual reasoning capabilities in Vision-Language Models (VLMs). Reason-RFT employs a two-phase training strategy: (1) SFT with curated CoT data to activate reasoning potential, followed by (2) Group Relative Policy Optimization (GRPO)-based reinforcement learning to generate diverse reasoning-response pairs.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='images/robobrain.jpg' width="180" height="110">
-          </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://superrobobrain.github.io/">
-            <h3>RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete</h3>
-          </a>
-          <p><strong>Yuheng Ji</strong>*, Huajie Tan*, Jiayu Shi*, Xiaoshuai Hao*, Yuan Zhang, Hengyuan Zhang, Pengwei Wang, Mengdi Zhao, Yao Mu, Pengju An, Xinda Xue, Qinghang Su, Huaihai Lyu, Xiaolong Zheng, Jiaming Liu, Zhongyuan Wang, Shanghang Zhang<br><em>CVPR</em>, 2025</p>
-          <a href="https://superrobobrain.github.io/">Project</a> / <a href="https://superrobobrain.github.io/">Paper</a>
-          <p>We developed <strong>RoboBrain</strong>, an MLLM-based model that combines robotic and general multi-modal data, utilizes a multi-stage training strategy, and incorporates long videos and high-resolution images to improve its robotic manipulation capabilities. Extensive experiments demonstrate that RoboBrain achieves state-of-the-art performance across various robotic tasks, highlighting its potential to advance robotic brain capabilities.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='images/msc-bench.png' width="180" height="100">
-          </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://msc-bench.github.io/">
-            <h3>MSC-Bench: Benchmarking and Analyzing Multi-Sensor Corruption for Driving Perception</h3>
-          </a>
-          <p>Xiaoshuai Hao, Guanqun Liu, Yuting Zhao, <strong>Yuheng Ji</strong>, Mengchuan Wei, Haimei Zhao, Lingdong Kong, Rong Yin, Yu Liu<br><em>ICME</em>, 2025</p>
-          <a href="https://msc-bench.github.io/">Project</a> / <a href="https://arxiv.org/abs/2501.01037">Paper</a>
-          <p>This work introduces Multi-Sensor Corruption Benchmark (MSC-Bench), the first comprehensive benchmark aimed at evaluating the robustness of multi-sensor autonomous driving perception models against various sensor corruptions.</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <script>
-    let show = false;
-    document.querySelector('#projects-show').onclick = function() {
-      if (!show) {
-        document.querySelector('#projects-box').style.height = 'auto';
-        document.querySelector('#projects-box').style.paddingBottom = '20px';
-        document.querySelector('#projects-show-text').innerHTML = 'Less';
-        show = true;
-      } else {
-        show = false;
-        document.querySelector('#projects-box').style.height = '160px';
-        document.querySelector('#projects-box').style.paddingBottom = '0px';
-        document.querySelector('#projects-show-text').innerHTML = 'More';
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Pages - 学术个人网站模板</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
-    }
-  </script>
-</body>
+
+      body {
+        background-color: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container-wrapper {
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .container {
+        display: flex;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      /* 侧边栏样式 */
+      .sidebar {
+        width: 300px;
+        background-color: #f9f9f9;
+        border-right: 1px solid #eaeaea;
+        padding: 40px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #7f8c8d;
+        font-size: 60px;
+        margin-bottom: 20px;
+      }
+
+      .profile-name {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #2c3e50;
+        text-align: center;
+      }
+
+      .bio {
+        text-align: center;
+        font-size: 14px;
+        color: #7f8c8d;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        max-width: 100%;
+      }
+
+      .links {
+        width: 100%;
+      }
+
+      .link-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        margin-bottom: 8px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        color: #3498db;
+        text-decoration: none;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .link-item:hover {
+        background-color: #eef7ff;
+        transform: translateX(5px);
+        color: #2980b9;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      .link-item i {
+        font-size: 20px;
+        margin-right: 15px;
+        width: 24px;
+        text-align: center;
+      }
+
+      /* 主内容区样式 */
+      .content {
+        flex: 1;
+        padding: 40px;
+        max-width: 900px;
+      }
+
+      .page-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+        color: #2c3e50;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .page-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, #3498db, #8e44ad);
+        border-radius: 2px;
+      }
+
+      .description {
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: #34495e;
+        line-height: 1.8;
+      }
+
+      .highlight {
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+      }
+
+      .section-title {
+        font-size: 24px;
+        margin: 40px 0 20px;
+        color: #2c3e50;
+        font-weight: 600;
+        position: relative;
+        padding-left: 15px;
+      }
+
+      .section-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 24px;
+        width: 4px;
+        background: #3498db;
+        border-radius: 2px;
+      }
+
+      .concept {
+        padding: 25px;
+        background-color: #f5f7fa;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+      }
+
+      .concept p {
+        margin-bottom: 15px;
+      }
+
+      /* 添加ORCID和PubMed链接 */
+      .link-orcid {
+        color: #a6ce39;
+      }
+
+      .link-pubmed {
+        color: #0078af;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #7f8c8d;
+        font-size: 14px;
+        padding: 20px;
+      }
+
+      /* 响应式设计 */
+      @media (max-width: 992px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+          border-right: none;
+          border-bottom: 1px solid #eaeaea;
+        }
+
+        .content {
+          padding: 30px 20px;
+        }
+
+        .container-wrapper {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <div class="container">
+        <!-- 左侧侧边栏 -->
+        <aside class="sidebar">
+          <div class="avatar">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h1 class="profile-name">Your Sidebar Name</h1>
+          <p class="bio">Short biography for the left-hand sidebar</p>
+
+          <div class="links">
+            <a href="#" class="link-item">
+              <i class="fas fa-globe"></i>
+              <span>Earth</span>
+            </a>
+            <a href="#" class="link-item">
+              <i class="fas fa-university"></i>
+              <span>Red Brick University</span>
+            </a>
+            <a href="#" class="link-item">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+            </a>
+            <a href="#" class="link-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Google Scholar</span>
+            </a>
+            <a href="#" class="link-item link-orcid">
+              <i class="fab fa-orcid"></i>
+              <span>ORCID</span>
+            </a>
+            <a href="#" class="link-item link-pubmed">
+              <i class="fas fa-book-medical"></i>
+              <span>PubMed</span>
+            </a>
+            <a href="#" class="link-item">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="#" class="link-item">
+              <i class="fas fa-cloud"></i>
+              <span>Bluesky</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- 右侧内容区 -->
+        <main class="content">
+          <h1 class="page-title">
+            Academic Pages is a ready-to-fork GitHub Pages template for academic
+            personal websites
+          </h1>
+
+          <p class="description">
+            This is the front page of a website that is powered by the Academic
+            Pages template and hosted on GitHub pages. GitHub pages is a free
+            service in which websites are built and hosted from code and data
+            stored in a GitHub repository, automatically updating when a new
+            commit is made to the repository.
+          </p>
+
+          <div class="highlight">
+            <p>
+              This template was forked from the Minimal Mistakes Jekyll Theme
+              created by Michael Rose, and then extended to support the kinds of
+              content that academics have: publications, talks, teaching, a
+              portfolio, blog posts, and a dynamically-generated CV. You can
+              fork this template right now, modify the configuration and
+              markdown files, add your own PDFs and other content, and have your
+              own site for free, with no ads!
+            </p>
+          </div>
+
+          <h2 class="section-title">A data-driven personal website</h2>
+
+          <div class="concept">
+            <p>
+              Like many other Jekyll-based GitHub Pages templates, Academic
+              Pages makes you separate the website's content from its form. The
+              content & metadata of your website are in structured markdown
+              files, while various other files constitute the theme, specifying
+              how to transform that content & metadata into HTML pages.
+            </p>
+            <p>
+              You keep these various markdown (.md), YAML (.yml), HTML, and CSS
+              files in a public GitHub repository. Each time you commit and push
+              an update to the repository, the GitHub pages service creates
+              static HTML pages based on these files, which are hosted on
+              GitHub's servers free of charge.
+            </p>
+          </div>
+        </main>
+      </div>
+
+      <div class="footer">
+        © 2023 Academic Pages Template | Designed for Academic Professionals
+      </div>
+    </div>
+  </body>
 </html>
