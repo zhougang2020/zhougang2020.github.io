@@ -8,3 +8,13 @@ body {
   max-width: 1200px;
   width: 100%;
 }
+.real-avatar {
+  width: 150px; /* 固定宽度 */
+  height: 150px; /* 固定高度 */
+  border-radius: 50%; /* 确保始终保持圆形 */
+  object-fit: cover; /* 图片自动裁剪以适配容器 */
+  border: 3px solid #fff; /* 添加白色边框避免背景融合 */
+  max-width: 100%; /* 确保不会超出父容器 */
+  display: block; /* 确保正确呈现 */
+  box-sizing: content-box; /* 边框不占用宽度空间 */
+}
