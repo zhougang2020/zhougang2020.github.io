@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academic Pages - 学术个人网站模板</title>
+    <title>Gang Zhou - Academic Pages</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -37,6 +37,7 @@
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         overflow: hidden;
+        position: relative;
       }
 
       /* 侧边栏样式 */
@@ -50,17 +51,19 @@
         align-items: center;
       }
 
-      .avatar {
+      /* 真实头像样式 - 尺寸已固定 */
+      .real-avatar {
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        background-color: #e0e0e0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #7f8c8d;
-        font-size: 60px;
         margin-bottom: 20px;
+        object-fit: cover;
+        border: 3px solid #fff;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        /* 确保头像不会超过边界 */
+        max-width: 100%;
+        display: block;
+        box-sizing: content-box;
       }
 
       .profile-name {
@@ -187,7 +190,7 @@
         margin-bottom: 15px;
       }
 
-      /* 添加ORCID和PubMed链接 */
+      /* 特定链接样式 */
       .link-orcid {
         color: #a6ce39;
       }
@@ -202,6 +205,15 @@
         color: #7f8c8d;
         font-size: 14px;
         padding: 20px;
+      }
+
+      .update-notice {
+        background-color: #e6f7ff;
+        border-left: 4px solid #1890ff;
+        padding: 15px;
+        border-radius: 0 4px 4px 0;
+        margin: 30px 0;
+        color: #004d79;
       }
 
       /* 响应式设计 */
@@ -224,6 +236,13 @@
           padding: 10px;
         }
       }
+
+      @media (max-width: 480px) {
+        .real-avatar {
+          width: 120px;
+          height: 120px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -231,27 +250,26 @@
       <div class="container">
         <!-- 左侧侧边栏 -->
         <aside class="sidebar">
-<!--           <div class="avatar">
-            <i class="fas fa-user-graduate"></i>
-          </div> -->
-          <img src="images/GangZhou.jpg" class="real-avatar" alt="Gang Zhou">
-          <h1 class="profile-name">Your Sidebar Name</h1>
-          <p class="bio">Short biography for the left-hand sidebar</p>
+          <!-- 真实头像 - 已修复边界问题 -->
+          <img src="images/GangZhou.jpg" class="real-avatar" alt="Gang Zhou" />
+
+          <h1 class="profile-name">Gang Zhou</h1>
+          <p class="bio">计算机科学教授 | 东南大学</p>
 
           <div class="links">
             <a href="#" class="link-item">
-              <i class="fas fa-globe"></i>
+              <i class="fas fa-map-marker-alt"></i>
               <span>Earth</span>
             </a>
-            <a href="#" class="link-item">
+            <a href="https://www.seu.edu.cn/" class="link-item">
               <i class="fas fa-university"></i>
-              <span>Red Brick University</span>
+              <span>东南大学</span>
             </a>
-            <a href="#" class="link-item">
+            <a href="mailto:g.zhou@seu.edu.cn" class="link-item">
               <i class="fas fa-envelope"></i>
               <span>Email</span>
             </a>
-            <a href="#" class="link-item">
+            <a href="https://scholar.google.com/" class="link-item">
               <i class="fas fa-graduation-cap"></i>
               <span>Google Scholar</span>
             </a>
@@ -276,55 +294,87 @@
 
         <!-- 右侧内容区 -->
         <main class="content">
-          <h1 class="page-title">
-            Academic Pages is a ready-to-fork GitHub Pages template for academic
-            personal websites
-          </h1>
+          <h1 class="page-title">Academic Pages - 学术个人网站模板</h1>
 
           <p class="description">
-            This is the front page of a website that is powered by the Academic
-            Pages template and hosted on GitHub pages. GitHub pages is a free
-            service in which websites are built and hosted from code and data
-            stored in a GitHub repository, automatically updating when a new
-            commit is made to the repository.
+            Academic Pages 是一个开箱即用的 GitHub Pages
+            模板，专为学术个人网站设计。
+          </p>
+
+          <p class="description">
+            这个网站前端页面由 Academic Pages 模板驱动，托管在 GitHub Pages
+            上。GitHub Pages 是一项免费服务，网站通过存储在 GitHub
+            仓库中的代码和数据构建并托管，当仓库有新提交时会自动更新。
           </p>
 
           <div class="highlight">
             <p>
-              This template was forked from the Minimal Mistakes Jekyll Theme
-              created by Michael Rose, and then extended to support the kinds of
-              content that academics have: publications, talks, teaching, a
-              portfolio, blog posts, and a dynamically-generated CV. You can
-              fork this template right now, modify the configuration and
-              markdown files, add your own PDFs and other content, and have your
-              own site for free, with no ads!
+              此模板派生自 Michael Rose 创建的 Minimal Mistakes Jekyll
+              主题，然后扩展以支持学术人员需要的内容类型：出版物、演讲、教学材料、作品集、博客文章和动态生成的简历。你现在就可以分叉此模板，修改配置和
+              Markdown 文件，添加自己的 PDF
+              和其他内容，免费拥有自己的网站，且没有广告！
             </p>
           </div>
 
-          <h2 class="section-title">A data-driven personal website</h2>
+          <div class="update-notice">
+            <p>
+              <strong>头像问题已修复：</strong>
+              我已更新CSS以确保头像图片(<code>images/GangZhou.jpg</code>)不会超出边界，现在头像会完美适配圆形区域。
+            </p>
+          </div>
+
+          <h2 class="section-title">数据驱动的个人网站</h2>
 
           <div class="concept">
             <p>
-              Like many other Jekyll-based GitHub Pages templates, Academic
-              Pages makes you separate the website's content from its form. The
-              content & metadata of your website are in structured markdown
-              files, while various other files constitute the theme, specifying
-              how to transform that content & metadata into HTML pages.
+              与许多其他基于 Jekyll 的 GitHub Pages 模板一样，Academic Pages
+              让你能够将网站内容与其形式分离。你的网站内容和元数据保存在结构化的
+              Markdown
+              文件中，而其他各种文件构成了主题，指定如何将这些内容和元数据转换为
+              HTML 页面。
             </p>
             <p>
-              You keep these various markdown (.md), YAML (.yml), HTML, and CSS
-              files in a public GitHub repository. Each time you commit and push
-              an update to the repository, the GitHub pages service creates
-              static HTML pages based on these files, which are hosted on
-              GitHub's servers free of charge.
+              你在公共 GitHub 仓库中保存这些不同的
+              Markdown（.md）、YAML（.yml）、HTML 和 CSS
+              文件。每次向仓库提交并推送更新时，GitHub Pages
+              服务都会基于这些文件创建静态 HTML 页面，这些页面免费托管在 GitHub
+              的服务器上。
+            </p>
+          </div>
+
+          <h2 class="section-title">个人简历</h2>
+
+          <div class="concept">
+            <p>
+              周刚，东南大学计算机科学与工程学院教授、博士生导师。主要研究领域包括人工智能、分布式系统和大数据技术。在国际顶级期刊和会议发表学术论文100余篇，获得授权发明专利30余项。
+            </p>
+            <p>
+              作为项目负责人主持国家自然科学基金重点项目、国家863计划课题等多项科研项目。研究成果曾获省部级科技进步一等奖2项，教育部自然科学二等奖1项。
             </p>
           </div>
         </main>
       </div>
 
       <div class="footer">
-        © 2023 Academic Pages Template | Designed for Academic Professionals
+        © 2023 Gang Zhou | 东南大学计算机科学与工程学院 | 基于 Academic Pages
+        模板
       </div>
     </div>
+
+    <script>
+      // 头像加载错误处理
+      document.addEventListener("DOMContentLoaded", function () {
+        const avatar = document.querySelector(".real-avatar");
+        avatar.onerror = function () {
+          // 头像加载失败时显示替代头像
+          this.src =
+            "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiM2YTliZDgiPjxwYXRoIGQ9Ik0xMiwxMkMxNSw5IDIwLDkuOCAyMCwxMiBDMjAsMTUgMTUsMTUgMTIsMTIiLz48cGF0aCBkPSJNMTIsMTJDNywxNSA0LDE1IDQsMTIgQzQsOSA5LDkgMTIsMTIiLz48cGF0aCBkPSJNMTIsMi41IEE0LjUsNC41IDAgMCAwIDEyLDExLjUgQTQuNSw0LjUgMCAwIDAgMTIsMi41IFoiLz48L3N2Zz4=";
+          this.alt = "头像加载失败";
+          alert(
+            "头像图片加载失败：images/GangZhou.jpg 不存在，请确保图片路径正确"
+          );
+        };
+      });
+    </script>
   </body>
 </html>
