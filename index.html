@@ -9,7 +9,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-      /* 原有样式保持不变 */
       * {
         margin: 0;
         padding: 0;
@@ -203,7 +202,6 @@
         padding: 20px;
       }
 
-      /* 响应式设计 */
       @media (max-width: 992px) {
         .container {
           flex-direction: column;
@@ -231,7 +229,7 @@
         }
       }
 
-      /* 新增：论文展示样式 */
+      /* 论文展示样式 */
       .publication-item {
         margin-bottom: 40px;
         padding: 20px;
@@ -339,7 +337,6 @@
         border-radius: 3px;
       }
 
-      /* 响应式适配 */
       @media (max-width: 768px) {
         .pub-top-row {
           flex-direction: column;
@@ -391,11 +388,13 @@
           </div>
         </aside>
 
-        <!-- 右侧内容区 -->
+        <!-- 右侧内容区 - 包含所有三篇论文 -->
         <main class="content">
           <h1 class="page-title">About me</h1>
           <p class="description">
-            My name is Gang Zhou, and I am currently pursuing a Ph.D. at the School of Artificial Intelligence, Beijing University of Posts and Telecommunications, with an expected graduation year of 2027.
+            My name is Zhou Gang, and I am currently a Ph.D. student at the
+            School of Artificial Intelligence, Beijing University of Posts and
+            Telecommunications, expected to graduate in 2027.
           </p>
 
           <h2 class="section-title">Research</h2>
@@ -481,27 +480,60 @@
               </p>
             </div>
           </div>
+
+          <!-- 论文条目3：BACH - 已修复位置 -->
+          <div class="publication-item">
+            <div class="pub-top-row">
+              <div class="pub-image">
+                <img src="images/BACH.png" alt="BACH" />
+              </div>
+              <div class="pub-info">
+                <div class="pub-title">
+                  <a
+                    href="https://link.springer.com/chapter/10.1007/978-3-031-30675-4_32"
+                  >
+                    BACH: Black-Box Attacking on Deep Cross-Modal Hamming
+                    Retrieval Models
+                  </a>
+                </div>
+                <div class="pub-authors">
+                  Jie Zhang, <strong>Gang Zhou*</strong>, Qianyu Guo, Zhiyong
+                  Feng, and Xiaohong Li
+                </div>
+                <div class="pub-venue"><em>DASFAA</em>, 2023</div>
+                <div class="pub-links">
+                  <a href="papers/BACH.pdf">Paper</a>
+                </div>
+              </div>
+            </div>
+            <div class="pub-abstract">
+              <p>
+                We propose <span class="highlight">BACH</span>, an adversarial
+                attack method for deep cross-modal hashing retrieval (DCMHR)
+                models in black-box settings. By incorporating Random
+                Gradient-Free Estimation (RGF) into deep hashing attacks, BACH
+                generates effective adversarial samples without prior knowledge
+                of the target model. Experiments show that BACH achieves attack
+                success rates comparable to white-box attacks.
+              </p>
+            </div>
+          </div>
         </main>
       </div>
 
       <div class="footer">
-        © 2025 Gang Zhou | 周刚 |Beijing University of Posts and
+        © 2025 Gang Zhou | 周刚 | Beijing University of Posts and
         Telecommunications
       </div>
     </div>
 
     <script>
-      // 头像加载错误处理
       document.addEventListener("DOMContentLoaded", function () {
         const avatar = document.querySelector(".real-avatar");
         avatar.onerror = function () {
-          // 头像加载失败时显示替代头像
           this.src =
             "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiM2YTliZDgiPjxwYXRoIGQ9Ik0xMiwxMkMxNSw5IDIwLDkuOCAyMCwxMiBDMjAsMTUgMTUsMTUgMTIsMTIiLz48cGF0aCBkPSJNMTIsMTJDNywxNSA0LDE1IDQsMTIgQzQsOSA5LDkgMTIsMTIiLz48cGF0aCBkPSJNMTIsMi41IEE0LjUsNC41IDAgMCAwIDEyLDExLjUgQTQuNSw0LjUgMCAwIDAgMTIsMi41IFoiLz48L3N2Zz4=";
           this.alt = "头像加载失败";
-          alert(
-            "头像图片加载失败：images/GangZhou.jpg 不存在，请确保图片路径正确"
-          );
         };
       });
     </script>
